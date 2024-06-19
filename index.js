@@ -60,3 +60,4 @@ function DoAnimation(animate){
         document.querySelector('.'+animate).classList.remove("pressed");
     },100)
 }
+keyboardInput.focus();
