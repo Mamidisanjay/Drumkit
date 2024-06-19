@@ -7,9 +7,14 @@ for (var i = 0; i< numberofdrums; i++) {
         DoAnimation(buttoninner_html);
         keyboardInput.focus(); // Focus on the input field when a drum is clicked
     });
-    
-    
 }
+
+keyboardInput.addEventListener("input", function (event) {
+    var key = event.target.value.toLowerCase(); // Get the latest value from the input field
+    makesound(key);
+    DoAnimation(key);
+    event.target.value = ''; // Clear the input field to capture the next key press
+});
 
 
 document.addEventListener("keydown",function(press){
