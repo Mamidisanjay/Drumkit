@@ -9,12 +9,6 @@ for (var i = 0; i< numberofdrums; i++) {
     });
 }
 
-keyboardInput.addEventListener("input", function (event) {
-    var key = event.target.value.toLowerCase(); // Get the latest value from the input field
-    makesound(key);
-    DoAnimation(key);
-    event.target.value = ''; // Clear the input field to capture the next key press
-});
 
 
 document.addEventListener("keydown",function(press){
@@ -22,6 +16,12 @@ document.addEventListener("keydown",function(press){
   DoAnimation(press.key);
 });
 
+keyboardInput.addEventListener("input", function (event) {
+    var key = event.target.value.toLowerCase(); // Get the latest value from the input field
+    makesound(key);
+    DoAnimation(key);
+    event.target.value = ''; // Clear the input field to capture the next key press
+});
 
 function makesound(key) {
     switch (key) {
