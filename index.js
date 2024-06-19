@@ -1,9 +1,11 @@
 var numberofdrums= document.querySelectorAll(".drum").length
+var keyboardInput = document.getElementById('keyboard-input');
 for (var i = 0; i< numberofdrums; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click",function () {
         var buttoninner_html=this.innerHTML;
         makesound(buttoninner_html);
         DoAnimation(buttoninner_html);
+        keyboardInput.focus(); // Focus on the input field when a drum is clicked
     });
     
     
